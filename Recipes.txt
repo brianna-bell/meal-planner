@@ -1,0 +1,76 @@
+Dish Name: Country Oven Fried Tilapia
+Ingredients: 1 lb fresh tilapia fillets, 4 teaspoons vegetable oil, 8 tablespoons of seasoned breadcrumbs, 1 tablespoon lemon juice, 1 teaspoon paprika, 0.5 tsp salt, 0.5 tsp pepper, Lemon wedges, 
+Difficulty: EASY
+Category: Fish
+Dish Name: Jambalaya
+Ingredients: Zataran’s Jambayla mix, Box of Chicken Broth, 1.5 lbs cooked chicken/sausage, 
+Difficulty: EASY
+Category: One pot
+Dish Name: Juicy Lucy Burgers
+Ingredients: Small gold potatoes, 2-3 garlic cloves, 1.5 lbs Ground beef, 0.5 cup Cheddar cheese, 4 Potato or Brioche buns, 2 tbsp Mayonnnaise, 2 tbsp Sour cream, 2 tbsp butter, 1 large onion diced, 1 tbsp honey, 4 tbsp whiskey or burbon, 1 tsp salt, Garlic powder, Onion powder, Paprika, 
+Difficulty: MEDIUM
+Category: Burger
+Dish Name: Chili
+Ingredients: 1.5 lbs ground chuck, 2 small cans tomato sauce, 2 cans chili beans, 3 Tbsp chili powder, shredded cheese, fritos
+Difficulty: EASY
+Category: One pot
+Dish Name: Chicken Tacos
+Ingredients: 1 lime, 1 tsp chipotle powder, 9 oz chicken, 6 small tortillas, Mexican cheese blend, Veggie oil, Sour cream or slaw, Tortilla chips, Southwest spice
+Difficulty: MEDIUM
+Category: Mexican
+Dish Name: Linguine Carbonara
+Ingredients: 4 cloves garlic, 4 pieces bacon, Linguine pasta, Refridgerated/frozen peas, Cream cheese, Shredded parmesan, 3 tbsp butter, Olive oil, Egg yolk, Garlic bread/sticks
+Difficulty: HARD
+Category: Pasta
+Dish Name: Cheesy Black Bean Quesadillas
+Ingredients: Green bell pepper, Black beans, 4 small flour tortillas, Shredded pepper jack cheese, Sour cream, 1 tbsp butter, Veggie oil, Tortilla chips, Southwest spice
+Difficulty: MEDIUM
+Category: Mexican
+Dish Name: Spicy Maple Chicken
+Ingredients: Potatoes, 0.5 cup Panko Breadcrumbs, 2 tbsp sour cream, 4 tbsp maple syrup, 2 chicken breasts, Garlic powder, Onion powder, Paprika, Chili flakes, 2 tbsp butter, Olive oil, Veggie oil
+Difficulty: MEDIUM
+Category: Chicken
+Dish Name: Herby Chicken over Lemony Spaghetti
+Ingredients: Garlic bread/sticks, Zucchini, Lemon, 2 chicken breasts, 0.5 cup chicken stock, 0.25 cup Parmesean cheese, Minced garlic, Spaghetti noodles, 1 tbsp Italian seasoning, 2 tbsp sour cream, 1 tbsp butter, Olive oil, Veggie oil
+Difficulty: HARD
+Category: Pasta
+Dish Name: White Chicken Chili
+Ingredients: 2 large chicken breasts, 15 oz can black beans drained and rinsed, 15 oz can white beans drained, 1 medium onion chopped, 15 oz can corn with juice, 10 oz can Rotel diced tomatoes with green chilis (with their juice), 1/2 cup chicken broth or stock, 1 tsp chili powder or to taste, 1 tsp cumin powder, 0.4 oz packet ranch dip or dressing mix, 8 oz package cream cheese cut into 6 pieces
+Difficulty: MEDIUM
+Category: Instant pot
+Dish Name: Kickin BBQ Pulled Chicken Sandwich
+Ingredients: Small gold potatoes, 1 lime, Coleslaw (optional), Potato buns, 10 oz pulled chicken in bbq sauce (Jack Daniels makes about 3 sandwiches), Veggie oil, Southwest spice
+Difficulty: MEDIUM
+Category: Burger
+Dish Name: Thai Red Curry Chicken
+Ingredients: 2 tablespoons oil, 2 shallots diced, 1.5 lbs. chicken breast cut into 1-inch cubes, 3 tablespoons red curry paste, 13.5 ounces coconut milk 1 can, 2 tablespoons brown sugar, 1 tablespoon fish sauce, 1 red bell pepper sliced, White rice
+Difficulty: MEDIUM
+Category: Chicken
+Dish Name: Sean's Spicy Stir Fry
+Ingredients: Chicken tenderloins, 1 cup rice, 5 eggs, soy sauce, gochujang, rice wine vinegar, brown sugar, toasted sesame oil, Minced garlic, lemon, Diced onion, broccoli, carrots
+Difficulty: MEDIUM
+Category: Asian
+Dish Name: Instant pot chicken and dumplings
+Ingredients: 1 large or 2 medium boneless chicken breasts, 6 cups chicken broth, 2 ribs of celery, broken in half, 1/2 onion (chunk), salt & pepper to taste, 3 cups all-purpose flour, 1 Tbs baking powder, 1 1/4 tsp salt, 1 cup + 2 Tbs milk
+Difficulty: EASY
+Category: Chicken
+Dish Name: Johnny's pork chops
+Ingredients: 4 pork chops, 16 oz (2 cups) of hickory brown sugar bbq sauce, Honey, Ketchup, Paprika, Salt, Baking powder, Onion powder or garlic powder, Ground black pepper, Chili powder
+Difficulty: EASY
+Category: Pork
+Dish Name: Japanese Fried Chicken Wings
+Ingredients: 1 lb chicken wings, 3 Tsp salt, 6 Tbsp cooking sake, 4 Garlic cloves, 2 lemons for taste, Veggie, peanut or canola oil to fry
+Difficulty: MEDIUM
+Category: Asian
+Dish Name: Fried Rice
+Ingredients: 6 tablespoon butter, 4 eggs, carrots, diced onion, 1 cup frozen peas, 6 cloves minced garlic, salt and black pepper, 3 cup cooked and chilled rice, 6 green onions, 5–8 tablespoons soy sauce, 4 teaspoon oyster sauce (optional), 1 teaspoon toasted sesame oil
+Difficulty: MEDIUM
+Category: Asian
+Dish Name: Twice baked potatoes
+Ingredients: 8 baking potatoes, 3 tablespoons canola oil, 2 sticks salted butter, Bacon, 1 cup sour cream, 1.5 cup Cheddar cheese, 1 cup whole milk, 2 teaspoons seasoned salt
+Difficulty: EASY
+Category: Potato 
+Dish Name: Baked Salmon
+Ingredients: 2 filets of salmon boneless, fresh rosemary, 2 small lemons, 2 tablespoons extra virgin olive oil, 1 teaspoon kosher salt, 1/4 teaspoon ground black pepper, 4 Tbs minced garlic 
+Difficulty: EASY
+Category: Fish 
