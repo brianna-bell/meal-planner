@@ -13,13 +13,13 @@
 - 2 cups half & half or milk or light or heavy cream
 - 8 oz block grated cheddar cheese or 2 cups (mild, medium, or sharp )
 
-- Melt butter in a large dutch oven or pot over medium-high heat. Add the
+1. Melt butter in a large dutch oven or pot over medium-high heat. Add the
 onion and cook 3-4 minutes or until softened and light gold. Add the
 garlic and saute for another minute.
-- Add flour and whisk for 1-2 minutes or until the flour begins to turn
+2. Add flour and whisk for 1-2 minutes or until the flour begins to turn
 golden in color. Pour in the chicken stock, broccoli florets, carrots,
 and seasoning. Bring to a boil then reduce heat to medium-low and simmer for 15 minutes or until the broccoli and carrots are cooked through.
-- Stir in half & half and cheddar cheese and simmer for another minute. Taste and adjust seasoning if needed.
-- Serve with toasted crusty bread or in a bread bowl if desired.
+3. Stir in half & half and cheddar cheese and simmer for another minute. Taste and adjust seasoning if needed.
+4. Serve with toasted crusty bread or in a bread bowl if desired.
 
 [https://gimmedelicious.com/wp-content/uploads/2019/12/Creamy-Broccoli-Cheddar-Soup-5-150x150.jpg](https://gimmedelicious.com/wp-content/uploads/2019/12/Creamy-Broccoli-Cheddar-Soup-5-150x150.jpg)

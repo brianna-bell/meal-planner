@@ -40,7 +40,7 @@ def populateRecipes():
     currentDir = os.getcwd()
 
     # Print the current working directory1
-    print("Current working directory: {0}".format(currentDir))
+    #print("Current working directory: {0}".format(currentDir))
 
     if(os.path.exists(currentDir+'\Export\\')): # check that recipe directory exists
         os.chdir('Export')
@@ -56,6 +56,8 @@ def populateRecipes():
     # RecipesList = os.listdir()
 
     # list = []
+    #r = open("Recipes.txt","a+") 
+    r = open("Recipes.txt","w+") 
 
     # dirs=directories
     for (root, dirs, file) in os.walk(recipeDir):
@@ -64,26 +66,25 @@ def populateRecipes():
                 g = open(f, 'r')
                 text = g.readlines()
                 last = text[-1]
+                ingredients = [] # list of ingredients for current recipe
                 for j in (text):
-                    ingredients = [] # list of ingredients for current recipe
-                    
+
                     if(j[0] == "#"):
                         #print(j) # this is the name of the recipe
                         currentDishName = re.sub(r"# ", "", j).strip() # strip the markdown and assign it to the name
                     
                     elif(j[0] == "-"):
                         j = re.sub(r"- ","",j).strip()
-                        print("Adding Ingredient " + j )
+                        #print("Adding Ingredient " + j )
                         ingredients.append(j)
 
                     elif (j is last):
-                        print("Adding "+ currentDishName + " to recipe list")
+                        #print("Adding "+ currentDishName + " to recipe list")
+                        r.write(currentDishName + "\n")
                         currentRecipe = Recipe(currentDishName,ingredients)
                         allRecipes.append(currentRecipe)
-
-                        
-                    
     print("There are " + str(len(allRecipes)) + " recipes recorded")
+    r.close()
 
 
 #currentRecipe = Recipe(dishName, ingredients, difficulty, category)
@@ -133,46 +134,17 @@ def populateRecipes():
 #    # f.write('END')
 #     f.close()
 
-def mealPlan():
-
-    dishName = ''
-    ingredients = []
-    difficulty = ''
-    category = ''
-
-    #populate database
-    f = open("Recipes.txt")
-    for line in f:
-        if line.startswith('Dish Name: '):
-            dishName = line.strip('Dish Name: ').rstrip()
-        elif line.startswith('Ingredients: '):
-            ingredientString = line.strip('Ingredients: ').rstrip()
-            ingredients = ingredientString.split(', ')
-            ingredients[-1] = ingredients[-1].rstrip(',')
-        elif line.startswith('Difficulty: '):
-            difficulty = line.strip('Difficulty: ').rstrip()
-        elif line.startswith('Category: '):
-            category = line.strip('Category: ').rstrip()
-            #print('Recipe added: ' + dishName)
-            #print('\tIngredients: ' + ingredients[0])
-            #print('\tDifficulty: ' + difficulty)
-            #print('\tCategory: ' + category)
-            currentRecipe = Recipe(dishName, ingredients, difficulty, category)
-            allRecipes.append(currentRecipe)
-    f.close()  
-
+def chooseMeals():
     topLimit = len(allRecipes)-1 
 
-    firstMeal = random.randint(0, topLimit)
-    
-    secondMeal = random.randint(0, topLimit)
-    while (secondMeal == firstMeal):
-        secondMeal = random.randint(0, topLimit)    # Generate the computer's choice
-
-
-    thirdMeal = random.randint(0, topLimit)
-    while (thirdMeal == secondMeal or thirdMeal == firstMeal):
-        thirdMeal = random.randint(0, topLimit)    # Generate the computer's choice
+    for recipe in allRecipes:
+        firstMeal = random.randint(0, topLimit)
+        secondMeal = random.randint(0, topLimit)
+        while (secondMeal == firstMeal):
+            secondMeal = random.randint(0, topLimit)    # Generate the computer's choice
+        thirdMeal = random.randint(0, topLimit)
+        while (thirdMeal == secondMeal or thirdMeal == firstMeal):
+            thirdMeal = random.randint(0, topLimit)    # Generate the computer's choice
 
     chosenRecipes = []
 
@@ -184,40 +156,122 @@ def mealPlan():
     print('Meal Plan: \n\t' + allRecipes[firstMeal].dish + '\n\t' + allRecipes[secondMeal].dish + '\n\t' + allRecipes[thirdMeal].dish)
     print('\n\n\n')
 
+    return [firstMeal, secondMeal, thirdMeal] # 3 numbers
+
+def mealPlan():
+
+    dishName = ''
+    ingredients = []
+
+    # currentDir = os.getcwd()
+
+    # if(~(os.path.exists("Recipes.txt"))):
+    #     if(os.path.exists(currentDir+'\Export\\')): # check that recipe directory exists
+    #         os.chdir('Export')
+    #         currentDir = os.getcwd()
+    #         if((os.path.isfile(currentDir+"\Recipes.txt"))):
+    #             f = open("Recipes.txt")
+    #         else:
+    #             return
+
+    #"C:\Users\winch\Documents\Game dev\meal-planner\Export\Recipes.txt"
+
+
+    
+
+    #populate database
+    #f = open("Recipes.txt")
+    # for line in f:
+    #     if line.startswith('Dish Name: '):
+    #         dishName = line.strip('Dish Name: ').rstrip()
+    #     elif line.startswith('Ingredients: '):
+    #         ingredientString = line.strip('Ingredients: ').rstrip()
+    #         ingredients = ingredientString.split(', ')
+    #         ingredients[-1] = ingredients[-1].rstrip(',')
+    #     elif line.startswith('Difficulty: '):
+    #         difficulty = line.strip('Difficulty: ').rstrip()
+    #     elif line.startswith('Category: '):
+    #         category = line.strip('Category: ').rstrip()
+    #         #print('Recipe added: ' + dishName)
+    #         #print('\tIngredients: ' + ingredients[0])
+    #         #print('\tDifficulty: ' + difficulty)
+    #         #print('\tCategory: ' + category)
+    #         currentRecipe = Recipe(dishName, ingredients, difficulty, category)
+    #         allRecipes.append(currentRecipe)
+    # f.close()  
+
+    # topLimit = len(allRecipes)-1 
+
+    # firstMeal = random.randint(0, topLimit)
+    
+    # secondMeal = random.randint(0, topLimit)
+    # while (secondMeal == firstMeal):
+    #     secondMeal = random.randint(0, topLimit)    # Generate the computer's choice
+
+
+    # thirdMeal = random.randint(0, topLimit)
+    # while (thirdMeal == secondMeal or thirdMeal == firstMeal):
+    #     thirdMeal = random.randint(0, topLimit)    # Generate the computer's choice
+
+    recipeNums = chooseMeals()
+
     again = input('Sound good? Y or N\n')
     while again == 'n':
-        firstMeal = random.randint(0, topLimit)
-    
-        secondMeal = random.randint(0, topLimit)
-        while (secondMeal == firstMeal):
-            secondMeal = random.randint(0, topLimit)    # Generate the computer's choice
-
-
-        thirdMeal = random.randint(0, topLimit)
-        while (thirdMeal == secondMeal or thirdMeal == firstMeal):
-            thirdMeal = random.randint(0, topLimit)    # Generate the computer's choice
-
-        chosenRecipes.clear()
-
-        chosenRecipes.append(allRecipes[firstMeal])
-        chosenRecipes.append(allRecipes[secondMeal])
-        chosenRecipes.append(allRecipes[thirdMeal])
-
-        print('\n\n\n')
-        print('Meal Plan: \n\t' + allRecipes[firstMeal].dish + '\n\t' + allRecipes[secondMeal].dish + '\n\t' + allRecipes[thirdMeal].dish)
-        print('\n\n\n')
-
+        recipeNums = chooseMeals()
         again = input('Sound good? Y or N\n')
 
     print('Grocery list:\n')
 
-    for recipe in chosenRecipes:
-        for item in recipe.ingredients:
-            print(item)
+    FirstMeal = allRecipes[recipeNums[0]]
+    for item in FirstMeal.ingredients:
+        print(item)
+    SecondMeal = allRecipes[recipeNums[1]]
+    for item in SecondMeal.ingredients:
+        print(item)
+    ThirdMeal = allRecipes[recipeNums[2]]
+    for item in ThirdMeal.ingredients:
+        print(item)
+    
 
-    #todo - make a grocery list
 
-    allRecipes.clear()
+    # for recipe in recipes:
+    #     print(recipe.dishName)
+    #     for item in recipe.ingredients:
+    #         print(item)
+
+    
+    #     firstMeal = random.randint(0, topLimit)
+    
+    #     secondMeal = random.randint(0, topLimit)
+    #     while (secondMeal == firstMeal):
+    #         secondMeal = random.randint(0, topLimit)    # Generate the computer's choice
+
+
+    #     thirdMeal = random.randint(0, topLimit)
+    #     while (thirdMeal == secondMeal or thirdMeal == firstMeal):
+    #         thirdMeal = random.randint(0, topLimit)    # Generate the computer's choice
+
+    #     chosenRecipes.clear()
+
+    #     chosenRecipes.append(allRecipes[firstMeal])
+    #     chosenRecipes.append(allRecipes[secondMeal])
+    #     chosenRecipes.append(allRecipes[thirdMeal])
+
+    #     print('\n\n\n')
+    #     print('Meal Plan: \n\t' + allRecipes[firstMeal].dish + '\n\t' + allRecipes[secondMeal].dish + '\n\t' + allRecipes[thirdMeal].dish)
+    #     print('\n\n\n')
+
+    #     again = input('Sound good? Y or N\n')
+
+    # print('Grocery list:\n')
+
+    # for recipe in chosenRecipes:
+    #     for item in recipe.ingredients:
+    #         print(item)
+
+    # #todo - make a grocery list
+
+    # allRecipes.clear()
 
             
 
@@ -229,7 +283,7 @@ def mealPlan():
     #    print('hooray!')
 populateRecipes()
     #elif selection == '2':
-    #    mealPlan()
+mealPlan()
         
    # selection = input("What would you like to do? \n\t1 for adding new recipe\n\t2 for meal planning for the week\n\tx to quit\n\t")
 
