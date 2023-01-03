@@ -73,4 +73,5 @@ Category: Potato
 Dish Name: Baked Salmon
 Ingredients: 2 filets of salmon boneless, fresh rosemary, 2 small lemons, 2 tablespoons extra virgin olive oil, 1 teaspoon kosher salt, 1/4 teaspoon ground black pepper, 4 Tbs minced garlic 
 Difficulty: EASY
-Category: Fish 
+Category: Fish Dish Name: & C:/Users/winch/AppData/Local/Programs/Python/Python310/python.exe "c:/Users/winch/Documents/Game dev/meal-planner/Food.py"
+Ingredients: 

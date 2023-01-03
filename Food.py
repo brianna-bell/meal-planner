@@ -2,8 +2,9 @@
 from enum import Enum
 # from operator import contains
 # from unicodedata import category
-
+import os
 import random
+import re
 
 # class Difficulty(Enum):
 #     EASY = 1
@@ -23,56 +24,114 @@ class Recipe:
 
     dish = ''
     ingredients = []
-    difficulty = ''
-    category = ''
+    # difficulty = ''
+    # category = ''
 
-    def __init__(self, dish, ingredients, difficulty, category):
+    def __init__(self, dish, ingredients):
         self.dish = dish
         self.ingredients = ingredients
-        self.difficulty = difficulty
-        self.category = category
+        # self.difficulty = difficulty
+        # self.category = category
 
 
 def populateRecipes():
-    print('populating recipes')
-    f = open("Recipes.txt","a+") # todo later: make a new one
-    dishName = input('Enter the dish\'s name: ')
-    while dishName != 'x':
-        f.write('Dish Name: ' + dishName + '\n')
+    print('Populating recipes...')
 
-        ingred = []
+    currentDir = os.getcwd()
 
-        currentIng = input('What is the next ingredient? Type x to break\n')
-        while currentIng != 'x':
-            ingred.append(currentIng)
-            currentIng = input('What is the next ingredient? Type x to break\n')
+    # Print the current working directory1
+    print("Current working directory: {0}".format(currentDir))
 
-        f.write('Ingredients: ')
+    if(os.path.exists(currentDir+'\Export\\')): # check that recipe directory exists
+        os.chdir('Export')
+    else:
+        print("Error, recipe folder not found")
+        return
 
-        for item in ingred:
-            f.write(item + ', ')
+    recipeDir = os.getcwd()
 
-        f.write('\n')
+    # Print the current working directory1
+    # print("Current working directory: {0}".format(cwd2))
 
-        Diff = input('On a scale of 1 to 3, how difficult is this dish? ')
+    # RecipesList = os.listdir()
 
-        if int(Diff) == 1:
-            f.write('Difficulty: EASY\n')
-            print('Easy chosen')
-        elif int(Diff) == 2:
-            f.write('Difficulty: MEDIUM\n')
-            print('Medium chosen')
-        elif int(Diff) == 3:
-            f.write('Difficulty: HARD\n')
-            print('Hard chosen')
+    # list = []
+
+    # dirs=directories
+    for (root, dirs, file) in os.walk(recipeDir):
+        for f in file:
+            if '.md' in f:
+                g = open(f, 'r')
+                text = g.readlines()
+                last = text[-1]
+                for j in (text):
+                    ingredients = [] # list of ingredients for current recipe
+                    
+                    if(j[0] == "#"):
+                        #print(j) # this is the name of the recipe
+                        currentDishName = re.sub(r"# ", "", j).strip() # strip the markdown and assign it to the name
+                    
+                    elif(j[0] == "-"):
+                        j = re.sub(r"- ","",j).strip()
+                        print("Adding Ingredient " + j )
+                        ingredients.append(j)
+
+                    elif (j is last):
+                        print("Adding "+ currentDishName + " to recipe list")
+                        currentRecipe = Recipe(currentDishName,ingredients)
+                        allRecipes.append(currentRecipe)
+
+                        
+                    
+    print("There are " + str(len(allRecipes)) + " recipes recorded")
+
+
+#currentRecipe = Recipe(dishName, ingredients, difficulty, category)
+ #           allRecipes.append(currentRecipe)
+
+
+    #for recipe in RecipesList:
+    #    o = open(RecipesList)
         
-        category = input('What is the category of this dish? ')
-        f.write('Category: ' + category + '\n')
 
-        dishName = input('(Type x to break) Enter the dish\'s name: ')
+    #f = open("Recipes.txt","a+") # todo later: make a new one
+#     dishName = input('Enter the dish\'s name: ')
+#     while dishName != 'x':
+#         f.write('Dish Name: ' + dishName + '\n')
 
-   # f.write('END')
-    f.close()
+#         ingred = []
+
+#         currentIng = input('What is the next ingredient? Type x to break\n')
+#         while currentIng != 'x':
+#             ingred.append(currentIng)
+#             currentIng = input('What is the next ingredient? Type x to break\n')
+
+#         f.write('Ingredients: ')
+
+#         for item in ingred:
+#             f.write(item + ', ')
+
+#         f.write('\n')
+
+#         Diff = input('On a scale of 1 to 3, how difficult is this dish? ')
+
+#         if int(Diff) == 1:
+#             f.write('Difficulty: EASY\n')
+#             print('Easy chosen')
+#         elif int(Diff) == 2:
+#             f.write('Difficulty: MEDIUM\n')
+#             print('Medium chosen')
+#         elif int(Diff) == 3:
+#             f.write('Difficulty: HARD\n')
+#             print('Hard chosen')
+        
+#         category = input('What is the category of this dish? ')
+#         f.write('Category: ' + category + '\n')
+
+#         dishName = input('(Type x to break) Enter the dish\'s name: ')
+
+#    # f.write('END')
+#     f.close()
 
 def mealPlan():
 
@@ -162,20 +221,17 @@ def mealPlan():
 
             
 
-
-
-
 #times = 3
-selection = input("What would you like to do? \n\t1 for adding new recipe\n\t2 for meal planning for the week\n\tx to quit\n\t")
-while selection != 'x':
+#selection = input("What would you like to do? \n\t1 for adding new recipe\n\t2 for meal planning for the week\n\tx to quit\n\t")
+#while selection != 'x':
 
-    if selection == '1':
-        print('hooray!')
-        populateRecipes()
-    elif selection == '2':
-        mealPlan()
+    #if selection == '1':
+    #    print('hooray!')
+populateRecipes()
+    #elif selection == '2':
+    #    mealPlan()
         
-    selection = input("What would you like to do? \n\t1 for adding new recipe\n\t2 for meal planning for the week\n\tx to quit\n\t")
+   # selection = input("What would you like to do? \n\t1 for adding new recipe\n\t2 for meal planning for the week\n\tx to quit\n\t")
 
 
 
